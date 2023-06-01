@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flumello payment</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+    <link rel="shortcut icon" href="./ assets/favicon/android-chrome-512x512.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./ assets/images/logo-removebg-preview.png" alt="logo">
+                </a>
+            </div>
+            <div class="icon"><a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M160 936V456l320-240 320 240v480H560V656H400v280H160Z"/></svg></a></div>
+        </header>
+
+        <div class="total">
+            <span>Total</span>
+            <span class="price">₦250,000.00</span>
+        </div>
+        <hr>
+        <div class="delivery">
+            <h1>Delivery Address</h1><hr>
+            <section id="delivery-add">
+                <header>
+                    <div>Address Form</div>
+                </header>
+                <div class="delivery-form">
+                    <form action="#">
+                        <div>
+                            <label for="fname">Firstname:</label><br>
+                            <input type="text" id="fname" name="fname" placeholder="Enter Firstname.."><br>
+                        </div>
+
+                        <div>
+                            <label for="lname">Lastname:</label><br>
+                            <input type="text" id="lname" name="lname" placeholder="Enter lastname.."><br>
+                        </div>
+
+                       <div>
+                            <label for="telephone">Phone Number:</label><br>
+                            <input type="tel" id="telephone" name="telephone" placeholder="Mobile Number.."><br>
+                       </div>
+
+                        <div>
+                            <label for="address">Street Address:</label><br>
+                            <input type="text" id="address" name="address" placeholder="Enter Delivery Address.."><br>
+                        </div>
+
+                        <div>
+                            <label for="directions">Directions(optional):</label><br>
+                            <input type="text" id="directions" name="directions" placeholder="Directions.."><br>
+                        </div>
+
+                        <div>
+                            <label for="states">State:</label><br>
+                            <select name="states" id="states">
+                                <option value="Abia State">Abia State</option>
+                                <option value="Adamawa State">Adamawa State</option>
+                                <option value="Akwa Ibom State">Akwa Ibom State</option>
+                                <option value="Anambra State">Anambra State</option>
+                                <option value="Bauchi State">Bauchi State</option>
+                                <option value="Bayelsa State">Bayelsa State</option>
+                                <option value="Benue State">Benue State</option>
+                                <option value="Borno State">Borno State</option>
+                                <option value="Cross River State">Cross River State</option>
+                                <option value="Delta State">Delta State</option>
+                                <option value="Ebonyi State">Ebonyi State</option>
+                                <option value="Edo State">Edo State</option>
+                                <option value="Ekiti State">Ekiti State</option>
+                                <option value="Enugu State">Enugu Statek</option>
+                                <option value="Gombe State">Gombe State</option>
+                                <option value="Imo State">Imo State</option>
+                                <option value="Jigawa State">Jigawa State</option>
+                                <option value="Kaduna State">Kaduna State</option>
+                                <option value="	Kano State">Kano State</option>
+                                <option value="Katsina State">Katsina State</option>
+                                <option value="Kebbi State">Kebbi State</option>
+                                <option value="Kogi State">Kogi State</option>
+                                <option value="Kwara State">Kwara State</option>
+                                <option value="Lagos State">Lagos State</option>
+                                <option value="Nasarawa State">Nasarawa State</option>
+                                <option value="Niger State">Niger State</option>
+                                <option value="Ogun State">Ogun State</option>
+                                <option value="Ondo State">Ondo State</option>
+                                <option value="	Osun State">Osun State</option>
+                                <option value="Oyo State">Oyo State</option>
+                                <option value="Plateau State">Plateau State</option>
+                                <option value="Rivers State">Rivers State</option>
+                                <option value="	Sokoto State">Sokoto State</option>
+                                <option value="Taraba State">Taraba State</option>
+                                <option value="Yobe State">Yobe State</option>
+                                <option value="Zamfara State">Heritage Bank</option>
+                            </select><br><br>
+                        </div>
+
+                        <div>
+                            <label for="city">City:</label><br>
+                            <select name="city" id="city">
+                                <option value="9th Mile Corner">9th Mile Corner</option>
+                                <option value="Amuri">Amuri</option>
+                                <option value="Awgu">Awgu</option>
+                                <option value="Ezeagu">Ezeagu</option>
+                                <option value="Nenwe">Nenwe</option>
+                                <option value="Nike">Nike</option>
+                                <option value="Obe">Obe</option>
+                                <option value="Oji River">Oji River</option>
+                                <option value="Udi">Udi</option>
+                                <option value="Ngwo">Ngwo</option>
+                                <option value="Nsukka">Nsukka</option>
+                                <option value="Emene">Emene</option>
+                            </select><br><br>
+                        </div>
+
+                        <input type="submit" value="Save Address"><br><br>
+                    </form>
+                </div>
+            </section><hr>
+        </div>
+        
+        <div class="container">
+            <div class="payment-options"><h1>Payment Options</h1></div><hr>
+            <section class="bank-transfer">
+                <header>
+                    <div>Bank Transfer</div>
+                </header>
+                <div>
+                   <form action="#">
+                    <label for="fname">Fullname:</label><br>
+                    <input type="text" id="fname" name="fnmae" placeholder="Enter Fullname.."><br><br>
+
+                    <label for="banks">Choose Bank:</label>
+                    <select name="banks" id="banks">
+                        <option value="First-bank">First Bank</option>
+                        <option value="union-bank">Union Bank</option>
+                        <option value="fidelity-bank">Fidelity Bank</option>
+                        <option value="access-bank">Access Bank</option>
+                        <option value="uba">UBA</option>
+                        <option value="sterling-bank">Sterling Bank</option>
+                        <option value="opay">Opay</option>
+                        <option value="kuda">Kuda</option>
+                        <option value="zenith-bank">Zenith Bank</option>
+                        <option value="diamond-bank">Diamond Bank</option>
+                        <option value="palmpay">Palmpay</option>
+                        <option value="heritage-bank">Heritage Bank</option>
+                    </select>
+                   </form><br>
+                   <div class="account-details">
+                    <p>Please proceed to make payment of  <b>EXACTLY;</b></p>
+                    <p>NGN250,000.00</p>
+                    <p>via bank transfer to the account details below:</p>
+                    <p>Account Number:</p>
+                    <p>56789035421 <input type="submit" value="copy"></p>
+                    <p>Bank Name:</p>
+                    <p>Wema bank</p>
+                    <p>Beneficiary Name:</p>
+                    <p>Flumello Ltd</p>
+                    <p>This transaction expires in 30 minutes</p>
+                   </div>
+                </div>
+            </section>
+            <section class="card">
+                <header>
+                    <div>Cards</div>
+                </header>
+                <div>
+                    <form action="#">
+                        <div class="card-number">
+                            <label for="cnumber">Card Number:</label><br>
+                            <input type="number" id="cnumber" name="cnumber" placeholder="Card Number"><br>
+                        </div>
+
+                        <div class="date">
+                            <label for="edate">Expiry Date:</label><br>
+                            <input type="month" id="edate" name="edate"><br>
+                        </div>
+
+                        <div class="cvv">
+                            <label for="cvv">CVV:</label><br>
+                            <input type="number" id="cvv" name="cvv" placeholder="CVV"><br>
+                        </div>
+
+                        <div class="pin">
+                            <label for="pin">Card Pin:</label><br>
+                            <input type="password" id="pin" name="pin" placeholder="Card Pin"><br>
+                        </div>
+
+                        <input type="submit" value="Pay Now"><br><br>
+                    </form>
+                </div>
+            </section>
+            <article>
+                <div> <b>Please note:</b> Flumello will never ask you for your password, PIN, CVV or full card details over the phone or via email.
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
+        Copyright&copy; 2023 Fluello.com
+    </footer>
+</body>
+</html>

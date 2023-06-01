@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mogra&family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --blue: #16A6A7;
+    --yellow: #F69D01;
+    --pink: #FE4169;
+    --navy: #222248;
+    --lightnavy: #74748C;
+    --lightblue: #565671;
+    --black: #000000;
+    --white: #ffffff;
+    --lightgrey: #afacac;
+    --aliceblue: #F0F8FF;
+}
+header svg{
+    fill: white;
+    height: 25px;
+    width: 25px;
+}
+header .logo{
+    width: 150px;
+    height: 40px;
+    margin-right: 2px;
+}
+header .logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+body>header{
+    background-color: var(--navy);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    width: 100vw;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+header .left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header .left .menu{
+    margin-left: 5px;
+}
+
+header .right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .form{
+   grid-row: 2/3;
+   grid-column: 1/-1;
+   width: 90%;
+   margin: auto;
+
+}
+header .search-bar{
+    display: flex;
+    padding: 10px 0;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 6px;
+
+}
+header .search-bar input{
+    flex: 1;
+    font-size: 15px;
+    padding: 2px 20px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    color: black;
+}
+
+button[type=submit]{
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255);
+    transition: all 0.3s;
+}
+
+button[type=submit] svg{
+    fill: var(--lightnavy);
+}
+button[type=submit] p{
+    display: none;
+}
+header .profile, header .cart{
+    padding: 0 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--black);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+}
+.dropdown-content a p{
+    display: inline;
+}
+.dropdown-content svg{
+    fill: var(--navy);
+    width: 20px;
+    height: 20px;
+    transform: translate(-10px, 5px);
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+    
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+main{
+    background-color: var(--aliceblue);
+    height: 100%;
+    width: 100vw;
+}
+div.products{
+    padding: 10px 10px;
+}
+div.image{
+    height: 150px;
+    width: 150px;
+}
+div.image img{
+    height: 100%;
+    width: 100%;
+}
+div.product-card{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.product-card .text{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+div.product-card .text h1{
+    padding-top: 15px;
+}
+div.product-card .text h6{
+    color: green;
+    font-size: 10px;
+}
+div.product-card hr{
+    grid-column: 1/-1;
+    margin-top: 5px;
+}
+div.product-card div.links{
+    grid-column: 1/-1;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+div.product-card div.links a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    transition: all 0.5s;
+}
+div.product-card div.links a:hover{
+    background-color: dimgrey;
+    color: white;
+}
+span.cards{
+    display: flex;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+span.cards p{
+    margin: auto 2px;
+}
+span.cards  div.card-img{
+    width: 70px;
+    height: 30px;
+}
+span.cards  div.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 2px;
+}
+div.padlock{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+div.padlock svg{
+    height: 15px;
+    width: 15px;
+}
+div.button {
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+}
+div.button form{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+div.button form button{
+    background-color: var(--navy);
+    color: white;
+    padding: 5px 40px;
+    margin-top: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+div.button form button:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.938);
+    color: var(--lightgrey);
+    padding: 5px 10px;
+}
+footer p{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+footer a{
+    text-decoration: none;
+    color: var(--lightgrey);
+    display: block;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 25px;
+}
+footer a:hover, footer p:hover, footer div.social h1:hover, div.newsletter *:hover{
+    color: var(--white);
+}
+footer section{
+    margin: 10px 0;
+}
+
+footer button{
+    background-color: rgb(0, 0, 0);
+    color: var(--lightgrey);
+    display: grid;
+    grid-template-columns: repeat(2, auto 100px);
+    border: none ;
+    border-radius: 5px;
+    width: 160px;
+    height: 60px;
+    transition: all 0.6s;
+}
+footer div.buttons{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+footer button p{
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 15px;
+    padding: 10px 0 0 0;
+    text-transform: capitalize;
+}
+footer svg{
+    width: 40px;
+    height: 40px;
+    margin-left: 18px;
+    margin-top: 15px;
+    fill: white;
+}
+footer button:last-of-type svg{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+footer div.newsletter{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+}
+footer div.newsletter h2, footer div.newsletter p{
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+footer div.newsletter form{
+    display: flex;
+}
+footer div.newsletter input[type=email]{
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+footer div.newsletter button{
+    background-color: var(--navy);
+    width: 85px;
+    height: 40px;
+    display: flex;
+    color: var(--white);
+    padding-left: 5px;
+    align-items: center;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.6s;
+}
+footer div.newsletter button:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+footer div.social{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+footer div.social h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    grid-column: 1/-1;
+    margin-bottom: 10px;
+}
+footer div.social svg{
+    width: 25px;
+    height: 25px;
+    transform: translate(-5px, -3px);
+    transition: all 0.6s;
+}
+footer div.social div{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(43, 42, 42, 0.63);
+    align-items: center;
+}
+footer div.twitter, footer div.facebook, footer div.youtube, footer div.instagram{
+    transition: all 0.6s;
+}
+footer div.twitter:hover, footer div.facebook:hover, footer div.youtube:hover, footer div.instagram:hover{
+    background-color: white;
+}
+footer div.twitter:hover svg{
+    fill: #1C9CEA;
+}
+footer div.facebook:hover svg{
+    fill: #3E579D;
+}
+footer div.youtube:hover svg{
+    fill: #F70808;
+}
+footer div.instagram:hover path {
+    fill: url(#myGradient);
+}
+footer .copyright{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding-bottom: 20px;
+}
+footer .copyright::before, footer .copyright::after{
+    display: block;
+    content: '';
+    height: 1px;
+    background-color: dimgrey;
+}
+
+
+
+
+@media screen and (min-width:600px) {
+    *{
+        font-size: 20px;
+    }
+    header{
+        grid-template-rows: 1fr;
+        height: 65px;
+        align-items: center;
+     }
+     header svg{
+        height: 30px;
+        width: 30px;
+    }
+    header .logo{
+        width: 150px;
+        height: 60px;
+        margin-right: 2px;
+    }
+    header .form{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        width: 80%;
+        margin: auto;
+    }
+     button[type=submit]{
+        display: block;
+    }
+    div.image{
+        height: 250px;
+        width: 250px;
+    }
+    div.product-card{
+        grid-template-columns: auto 1fr;
+    }
+    div.product-card div.links a{
+        height: 50px;
+        width: 200px;
+    }
+    div.padlock{
+        padding-bottom: 10px;
+    }
+    div.button {
+        padding: 10px;
+        text-align: center;
+        overflow: hidden;
+    }
+    div.button form{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    div.button form button{
+        background-color: var(--navy);
+        color: white;
+        padding: 15px 90px;
+        margin-top: 5px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+    div.footer{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        padding-left: 30px;
+    }
+    footer div.newsletter button, footer div.newsletter input[type=email]{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width:750px){
+    *{
+        font-size: 18px;
+    }
+    div.products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 7px;
+    }
+    div.product-card{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    div.image{
+        height: 150px;
+        width: 150px;
+    }
+    div.product-card div.links a{
+        width: 150px;
+    }
+    div.footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0px;
+        padding-left: 0px;
+    }
+    footer button{
+        grid-template-columns: repeat(2, auto 100px);
+        width: 180px;
+    }
+    footer div.buttons{
+        padding-bottom: 10px;
+    }
+    footer button p{
+        line-height: 17px;
+        padding: 3px 0 0 0;
+    }
+    footer section#connect{
+        grid-column: 1/-1;
+        display: grid;
+        justify-content: center;
+    }
+    footer div.newsletter button, footer div.newsletter input[type=email]{
+        font-size: 19px;
+    }
+    footer div.newsletter input[type=email]{
+        width: 300px;
+    }
+    footer div.newsletter button{
+        width: 105px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    *{
+        font-size: 16px;
+    }
+    header .dropdown svg:hover, header .right svg:hover{
+        fill: var(--blue);
+    }
+        header .search-bar{
+        display: flex;
+        padding: 10px 0;
+        margin: 5px 0;
+        background-color: transparent;
+        border-radius: 0;
+
+    }
+    header .search-bar input{
+        flex: 1;
+        font-size: 15px;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        color: black;
+    }
+    button[type=submit]{
+        width: 80px;
+        height: inherit;
+        border-radius: 5px;
+        border: none;
+        margin: 0 5px;
+        background-color: var(--lightnavy);
+        color: white;
+    }
+    button[type=submit] svg{
+        fill: var(--black);
+    }
+    button[type=submit] svg{
+        display: none;
+    }
+    button[type=submit] p{
+        display: block;
+        
+    }
+    button[type=submit]:hover{
+        background-color: var(--lightblue);
+    }
+    div.cart{
+        margin-right: 10px;
+    }
+    div.products{
+        width: 90vw;
+        margin: auto;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    div.products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+    }
+    div.padlock{
+        padding-bottom: 50px;
+    }
+    div.button{
+        position: sticky;
+        bottom: 0;
+        padding: 10px;
+    }
+    div.button form{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    div.button form button{
+        padding: 15px 150px;
+        margin-top: 8px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.5s;
+    }
+    footer div.footer{
+        display: flex;
+        justify-content: space-around;
+    }
+}

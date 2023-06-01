@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mogra&family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --blue: #16A6A7;
+    --yellow: #F69D01;
+    --pink: #FE4169;
+    --navy: #222248;
+    --lightnavy: #74748C;
+    --lightblue: #565671;
+    --black: #000000;
+    --white: #ffffff;
+    --lightgrey: #afacac;
+    --aliceblue: #F0F8FF;
+}
+header{
+    margin-top: 0;
+    padding-top: 0;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+}
+header .logo img{
+    width: 150px;
+    object-fit: cover;
+}
+main .links a{
+    text-decoration: none;
+    color: var(--navy);
+}
+main .links a:last-of-type{
+    border-bottom: 2px solid var(--blue);
+}
+main .links{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 40px;
+}
+input[type=text], input[type=password], input[type=email], input[type=tel]{
+    width: 95%;
+    padding: 9px 7px;
+    margin: 5px 0;
+    margin-left: 17px;
+    border-radius: 4px;
+    border: 1px solid var(--lightblue);
+    outline: none;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus{
+    border: 1px solid var(--lightblue);
+    outline: none;
+}
+label[for=name], label[for=password], label[for=e-mail], label[for=telephone], label[for=user]  {
+    margin-left: 19px;
+    color: var(--navy);
+}
+input[type=checkbox]{
+    margin-left: 20px;
+}
+label[for=save]{
+    color: var(--black);
+}
+form div{
+    margin: 15px;
+    margin-right: 50px;
+}
+form div .terms{
+    margin: 0;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+input[type=submit]{
+    width: 95%;
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 14px 20px;
+    margin: 5px 0;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+}
+main .login{
+    text-align: center;
+    display: none;
+}
+main .login a{
+    text-decoration: underline;
+    color: var(--navy);
+}
+footer{
+    text-align: center;
+    color: grey;
+}
+
+@media screen and (min-width:500px){
+    main .links a:last-of-type{
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width:720px){
+    main .links{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    main .links a:last-of-type{
+        font-size: 25px;
+    }
+    main .links a:first-of-type{
+        display: none;
+    }
+    main .links{
+        display: block;
+        margin: 0;
+    }
+    body{
+        overflow-y: hidden;
+    }
+    main .form{
+        border: 2px solid transparent;
+        border-radius: 5px;
+        background-color: var(--lightgrey);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding-top: 10px;
+    }
+    
+    main .login{
+        display: block;
+        margin-top: 30px;
+    }
+    main{
+        transform: matrix(0.9, 0, 0, 0.79, 0, -70);
+        width: 70%;
+        margin: auto;   
+    }
+    form .checkbox, form .submit{
+        grid-column: 1/-1;
+        margin-top: 0;
+    }
+    input[type=text], input[type=password], input[type=email], input[type=tel]{
+        width: 100%;
+        border: none;
+        padding: 12px 10px;
+    }
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid var(--navy);
+        border-radius: 0;
+    }
+    input[type=submit]:hover{
+        background-color: var(--yellow);
+    }
+    form .email{
+        grid-column: 1/-1;
+    }
+    input[type=submit]{
+        width: 100%;
+        transition: all 0.4s;
+    }
+    form .firstname, form .username, form .password{
+        margin-right: 0;
+    }
+}

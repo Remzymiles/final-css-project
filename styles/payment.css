@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mogra&family=Varela+Round&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --blue: #16A6A7;
+    --yellow: #F69D01;
+    --pink: #FE4169;
+    --navy: #222248;
+    --lightnavy: #74748C;
+    --lightblue: #565671;
+    --black: #000000;
+    --white: #ffffff;
+    --lightgrey: #afacac;
+    --aliceblue: #F0F8FF;
+}
+main .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222248;
+}
+header .logo{
+    height: 50px;
+    width: 120px;
+}
+header img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+header .icon{
+    grid-column: -1;
+    width: 20px;
+    height: 20px;
+    color: var(--white);
+    align-self: center;
+    margin-right: 10px;
+}
+header .icon svg{
+    height: 100%;
+    width: 100%;
+    fill: var(--white);
+    transition: all 0.5s;
+}
+header .icon svg:hover{
+    fill: var(--blue);
+}
+main div.total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+}
+main span.price{
+    grid-column: -1;
+}
+main div.payment-options{
+    text-align: center;
+    padding: 5px;
+}
+div.delivery h1{
+    text-align: center;
+    padding: 5px;
+}
+section header div{
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navy);
+    color: var(--white);
+    border-radius: 10px 10px 0 0;
+}
+form{
+    margin-top: 10px;
+}
+ input[type=text], input[type=tel]{
+    width: 80%;
+    padding: 9px 7px;
+    margin: 5px 0;
+    margin-left: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--lightblue);
+}
+.card form, #delivery-add{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 0px;
+}
+.card form *{
+    width: 80%;
+    margin-left: 20px;
+}
+.card form input[type=number], input[type=month], input[type=tel], input[type=text], input[type=password]{
+    border-radius: 4px;
+    border: 1px solid var(--lightblue);
+    padding: 9px 7px;
+}
+.card form label[for=cvv], label[for=edate], label[for=cnumber], label[for=lname], label[for=telephone], label[for=directions], label[for=pin]{
+    color: var(--navy);
+}
+input[type=text]:focus, input[type=number]:focus, input[type=month]:focus, input[type=tel]:focus, input[type=password]:focus{
+    outline: none;
+}
+ label[for=fname], label[for=lname], label[for=telephone], label[for=directions], label[for=address]{
+    margin-left: 19px;
+    color: var(--navy);
+}
+.card form, #delivery-add form{
+    transform: translate(15px,0);
+}
+select{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--lightnavy);
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+}
+label[for=banks], label[for=states], label[for=city]{
+    margin-left: 19px;
+    color: var(--navy);
+}
+section .account-details{
+    margin: 20px;
+    color: var(--navy);
+}
+section .account-details p{
+    padding: 7px;
+}
+section .account-details p:nth-child(2)::after, section .account-details p:nth-child(5)::after, section .account-details p:nth-child(7)::after, section .account-details p:nth-child(9)::after{
+    content: '';
+    height: 2px;
+    display: block;
+    background-color: var(--lightnavy);
+    width: 95%;
+}
+section .account-details p:nth-child(2), section .account-details p:nth-child(5), section .account-details p:nth-child(7), section .account-details p:nth-child(9){
+    color: var(--black);
+}
+input[type=submit]{
+    margin-left: 20px;
+    font-size: 12px;
+}
+section .account-details p:last-of-type{
+    font-size: 12px;
+    margin-top: 20px;
+}
+section.bank-transfer, section.card{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: var(--lightgrey);
+    transform: matrix(0.9, 0, 0, 0.8, 0, -55);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+section#delivery-add{
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: var(--lightgrey);
+    transform: matrix(0.9, 0, 0, 0.9, 0, -10);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+}
+section.card{
+    transform: matrix(0.9, 0, 0, 0.8, 0, -135);
+}
+section.card form{
+    margin-top: 30px;
+}
+section#delivery-add form{
+    margin-top: 10px;
+}
+section.card input[type=submit], section#delivery-add input[type=submit]{
+    width: 80%;
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+.card input[type=submit]:hover, section#delivery-add input[type=submit]:hover{
+    background-color: var(--yellow);
+    color: black;
+}
+
+article div{
+    transform: translate(0, -170px);
+    font-size: 14px;
+    width: 90%;
+    margin: auto;
+}
+footer{
+    text-align: center;
+    color: grey;
+}
+@media screen and (min-width:720px){
+    *{
+        font-size: 20px;
+    }
+    .card form, .delivery-form form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 0px;
+    }
+    section.card form div:nth-child(1), .delivery-form form div:nth-child(3), .delivery-form form div:nth-child(4), .delivery-form form div:nth-child(5){
+        grid-column: 1/-1;
+        width: 100%;
+    }
+    .card form *, .delivery-form form *{
+        margin-left: 0px;
+        margin-right: 0;
+        width: 95%;
+    }
+    section.card input[type=submit], section#delivery-add input[type=submit]{
+        grid-column: 1/-1;
+        width: 95%;
+    }
+    section.bank-transfer input[type=text], section.card input[type=number], section.card input[type=password], section.card input[type=month], section#delivery-add input[type=text], section#delivery-add input[type=tel]{
+        border: none;
+    }
+    section.bank-transfer input[type=text]:focus, section.card input[type=number]:focus, section.card input[type=password]:focus, section.card input[type=month]:focus, section#delivery-add input[type=text]:focus, section#delivery-add input[type=tel]:focus{
+        border-bottom: 2px solid var(--navy);
+        border-radius: 0;
+    }
+    section{
+        width: 60%;
+        margin: auto;
+    }
+    section.card input[type=submit], section#delivery-add input[type=submit]{
+        margin-left: 0px;
+    }
+    article div{
+        transform: translate(10px, -170px);
+        width: 45%;
+    }
+}
