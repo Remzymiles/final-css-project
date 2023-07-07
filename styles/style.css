@@ -633,6 +633,7 @@ footer .copyright::before, footer .copyright::after{
     section#stores .image{
         height: 80px;
         width: 100px;
+        
     }
     div.footer{
         display: grid;
